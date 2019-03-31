@@ -152,6 +152,199 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-暴力破解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="暴力破解-Brute-Force"><a href="#暴力破解-Brute-Force" class="headerlink" title="暴力破解 Brute Force"></a>暴力破解 Brute Force</h2><p>原理：使用攻击者自己的用户名和密码字典，一个一个去枚举</p>
+<p>暴力破解过程：<br>1.确认破解范围 （确认字典）</p>
+<p>2.确认破解动作</p>
+<p>3.确认破解结果（判断是否成功破解）</p>
+<p>防止暴力破解的方法</p>
+<ul>
+<li>限制错误登录次数</li>
+<li>设置验证码</li>
+</ul>
+<p><a href="https://www.cnblogs.com/Jewel591/p/7484516.html" target="_blank" rel="noopener">暴力破解</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/31/暴力破解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CSRF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><p>Cross-site request forgery  跨站请求伪造<br>是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。</p>
+<p>cross-site request 跨站请求 是受害者执行的<br>forgery 伪造 是由攻击者操作的</p>
+<ul>
+<li><p>受害者角度<br>用户在当前已经登录的Web应用程序上执行<strong>非本意</strong>的操作</p>
+</li>
+<li><p>攻击者角度<br>攻击者欺骗浏览器，让其以<strong>受害者的名义</strong>执行自己想要的操作<br>利用用户已登录的身份，在用户毫不知情的情况下，以用户的名义完成非法操作</p>
+</li>
+</ul>
+<p>防止CSFR的方法  </p>
+<ul>
+<li>检查Referer字段</li>
+<li>添加校验token</li>
+</ul>
+<p>跟跨网站脚本（XSS）相比，XSS 利用的是用户对指定网站的信任，CSRF 利用的是网站对用户网页浏览器的信任</p>
+<p><a href="https://blog.csdn.net/gtLBTNq9mr3/article/details/78139431" target="_blank" rel="noopener">CSRF是什么</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/31/CSRF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-命令注入" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="命令注入-Command-Injection"><a href="#命令注入-Command-Injection" class="headerlink" title="命令注入 Command Injection"></a>命令注入 Command Injection</h2><p>命令注入流程：</p>
+<p>1.判断是否调用系统命令</p>
+<p>2.判断函数或函数的参数是否可控</p>
+<p>3.判断是否拼接注入命令</p>
+<ul>
+<li>比如用&amp;&amp;或者&amp;拼接两个命令</li>
+</ul>
+<ul>
+<li>比如用|  把第一个函数的值传给第二个函数</li>
+</ul>
+<p>常用的符号</p>
+<p>A&amp;B： 简单的拼接，AB无制约关系</p>
+<p>A&amp;&amp;B： A执行成功，然后才会执行B</p>
+<p>A|B： A的输出，作为B的输入</p>
+<p>A||B：A执行失败，然后才会执行B</p>
+<p>如果过滤了敏感命令</p>
+<p>比如：</p>
+<p>过滤了<code>whoami</code>命令</p>
+<p>windows可以使用<code>&quot;&quot;</code> <code>who&quot;&quot;am&quot;&quot;i</code></p>
+<p>Linux系统中还可以使用<code>‘</code>隔开 <code>who&#39;am&#39;i</code></p>
+<p>如果不显示输出结果怎么办</p>
+<p>可以使用延迟注入，远程请求观察响应时间来判断是否有命令注入漏洞</p>
+<p>延迟注入：</p>
+<p>windows  <code>ping 127.0.0.1 -n 5 &gt;nul</code></p>
+<p>linux <code>sleep 5</code>   延迟5s</p>
+<p>远程请求：<br>windows：ping，telnet等</p>
+<p>Linux：wget，curl等</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/31/命令注入/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-http" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

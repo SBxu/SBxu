@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http简述http是个啥HTTP（Hypertext Transfer Protocol）中文名：超文本传输协议Web使用http作为规范，完成客户端到服务器等一系列运作流程HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 告知服务器意图的HTTP方法1.GET：获取资源，从指定的资源请求数据（用来请求访问已被URI识别的资源，请求可被缓存）2.POST：向指定的资源提交要被处理的">
+  <meta name="description" content="暴力破解 Brute Force原理：使用攻击者自己的用户名和密码字典，一个一个去枚举 暴力破解过程：1.确认破解范围 （确认字典） 2.确认破解动作 3.确认破解结果（判断是否成功破解） 防止暴力破解的方法  限制错误登录次数 设置验证码  暴力破解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/03/19/http/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/31/暴力破解/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="http简述http是个啥HTTP（Hypertext Transfer Protocol）中文名：超文本传输协议Web使用http作为规范，完成客户端到服务器等一系列运作流程HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 告知服务器意图的HTTP方法1.GET：获取资源，从指定的资源请求数据（用来请求访问已被URI识别的资源，请求可被缓存）2.POST：向指定的资源提交要被处理的">
+<meta property="og:description" content="暴力破解 Brute Force原理：使用攻击者自己的用户名和密码字典，一个一个去枚举 暴力破解过程：1.确认破解范围 （确认字典） 2.确认破解动作 3.确认破解结果（判断是否成功破解） 防止暴力破解的方法  限制错误登录次数 设置验证码  暴力破解">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-12T09:25:44.755Z">
+<meta property="og:updated_time" content="2019-03-31T08:58:01.937Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="http简述http是个啥HTTP（Hypertext Transfer Protocol）中文名：超文本传输协议Web使用http作为规范，完成客户端到服务器等一系列运作流程HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 告知服务器意图的HTTP方法1.GET：获取资源，从指定的资源请求数据（用来请求访问已被URI识别的资源，请求可被缓存）2.POST：向指定的资源提交要被处理的">
+<meta name="twitter:description" content="暴力破解 Brute Force原理：使用攻击者自己的用户名和密码字典，一个一个去枚举 暴力破解过程：1.确认破解范围 （确认字典） 2.确认破解动作 3.确认破解结果（判断是否成功破解） 防止暴力破解的方法  限制错误登录次数 设置验证码  暴力破解">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,75 +154,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-http" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-暴力破解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="http简述"><a href="#http简述" class="headerlink" title="http简述"></a>http简述</h1><h3 id="http是个啥"><a href="#http是个啥" class="headerlink" title="http是个啥"></a>http是个啥</h3><p>HTTP（Hypertext Transfer Protocol）中文名：超文本传输协议<br>Web使用http作为规范，完成客户端到服务器等一系列运作流程<br>HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文</p>
-<h3 id="告知服务器意图的HTTP方法"><a href="#告知服务器意图的HTTP方法" class="headerlink" title="告知服务器意图的HTTP方法"></a>告知服务器意图的HTTP方法</h3><p>1.GET：获取资源，从指定的资源请求数据（用来请求访问已被URI识别的资源，请求可被缓存）<br>2.POST：向指定的资源提交要被处理的数据（用来传输实体的主体，请求不会被缓存）<br>3.PUT：传输文件保存到URI指定位置<br>4.HEAD：获得报文头部（用于确认URI的有效性及资源更新的日期时间等）<br>5.DELETE：请求URI删除指定文件（与PUT相反）<br>6.OPTIONS：用来查询针对请求URI指定的资源支持的方法</p>
-<h3 id="http报文"><a href="#http报文" class="headerlink" title="http报文"></a>http报文</h3><p>报文是http协议中的基本单位，是用于http协议交互的信息</p>
-<p><strong>请求报文/响应报文的结构 </strong><br>|报文首部:http首部字段+请求行/状态行|<br>|:—–:|<br>|空行（CR+LF）|<br>|报文主体|<br>-请求行：包含用于请求的方法，请求URI和HTTP版本<br>-状态行：包含表明响应结果的状态码，原因短语和http短语<br>-首部字段：包含表示请求和响应的各种条件和属性的各类首部<br>首部字段结构<br>首部字段包括：请求/响应首部字段，通用首部字段，实体首部字段<br>首部字段名：字段值</p>
-<p><strong>通用首部字段</strong><br><em>通用首部字段是指，请求报文和响应报文双方都会使用的首部</em><br>cache-control：能够控制缓存<br>缓存请求指令有：no-cache（强制向源服务器再次验证），no-store（不缓存请求或响应的任何内容），max-age=[秒]，no-transform（代理不可更改媒体类型），only-if-cached<br>缓存响应的指令：public，private，no-cache，no-store，no-transform，must-revalidate（可缓存但必须再向源服务器进行确认），max-age=[秒]</p>
-<p>Connection：</p>
+        <h2 id="暴力破解-Brute-Force"><a href="#暴力破解-Brute-Force" class="headerlink" title="暴力破解 Brute Force"></a>暴力破解 Brute Force</h2><p>原理：使用攻击者自己的用户名和密码字典，一个一个去枚举</p>
+<p>暴力破解过程：<br>1.确认破解范围 （确认字典）</p>
+<p>2.确认破解动作</p>
+<p>3.确认破解结果（判断是否成功破解）</p>
+<p>防止暴力破解的方法</p>
 <ul>
-<li>控制代理不再转发的首部字段<br>connection：不再转发的首部字段名</li>
-<li>管理持久连接<br>connection：close/keep-alive</li>
+<li>限制错误登录次数</li>
+<li>设置验证码</li>
 </ul>
-<p>Date表明创建http报文的日期和时间<br>Date：Tue, 05 Mar 2018 11:27:32 GMT<br>Transfer-Encoding:chunked(分块传输编码)</p>
-<p><strong>请求首部字段</strong><br><em>请求首部字段是从客户端往服务端发送请求报文中所使用的字段，用于补充请求的附加信息，客户端信息，对响应内容相关的优先级等内容</em><br>Accept：通知能够处理的媒体类型<br>（text/html   image/gif   video/mpeg）<br>Accept-Charset：通知服务器用户代理支持的字符集<br>Accept-Ecoding：通知服务器用户代理支持的内容编码<br>Accept-Language：自然语言<br>Authorization：告知服务器用户代理的认证信息<br>Host：告知服务器请求资源所处的互联网主机名和端口号（必须包含的首部字段）<br>If-xxx:条件请求。服务器接收到附带条件的请求后，只有判断为真，才能执行请求<br>Referer：告知服务器请求的原始资源的URI<br>User-Agent：将创建请求的浏览器和用户代理名称等信息传达给服务器</p>
-<p><strong>响应首部字段</strong><br><em>响应首部字段是由服务器向客户端返回响应报文中所使用的字段，用于补充响应的附加信息，服务器信息，以及对客户端的附加要求等信息</em><br>Accept-Ranges：用来告知客户端是否能处理范围请求，值有两种：bytes，none<br>Age：告知客户端，源服务器在多久前创建了响应，单位为秒<br>Location：可以将响应接受方引导至某个与请求URI位置不同的资源（常用于更换域名的时候）<br>Server:服务器用来处理请求的软件信息(与User-Agent请求相对应)</p>
-<p><strong>实体首部字段</strong><br><em>实体首部字段是包含在请求报文和响应报文中的实体部分所使用的首部，用于补充内容的更新时间等与实体相关的信息</em><br>Allow：通知客户端能够支持Request-URI指定资源的所有HTTP方法<br>Content-Encoding：告知客户端服务器对实体的主体部分选用的内容编码方式<br>Content-language：资源所用的自然语言<br>Content-Length：实体主体部分的大小，单位为字节<br>Content-Location：给出与报文主体相对应的URI<br>Content-Type：发送给接收者的实体正文的媒体类型<br>Expires：将资源失效的日期告知客户端<br>Last-Modified：资源最终被修改的时间</p>
-<h3 id="状态码告知从服务端返回的请求结果"><a href="#状态码告知从服务端返回的请求结果" class="headerlink" title="状态码告知从服务端返回的请求结果"></a>状态码告知从服务端返回的请求结果</h3><table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th>类别</th>
-<th>原因短语</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1xx</td>
-<td>Information（信息型状态码）</td>
-<td>接受的请求正在处理</td>
-</tr>
-<tr>
-<td style="text-align:center">2xx</td>
-<td>Success（成功状态码）</td>
-<td>请求正常处理完毕</td>
-</tr>
-<tr>
-<td style="text-align:center">3xx</td>
-<td>Redirecttion（重定向状态码）</td>
-<td>需要进行附加操作以完成请求</td>
-</tr>
-<tr>
-<td style="text-align:center">4xx</td>
-<td>Client error（客户端错误状态码）</td>
-<td>服务器无法处理请求</td>
-</tr>
-<tr>
-<td style="text-align:center">5xx</td>
-<td>Server error（服务器错误状态码）</td>
-<td>服务器处理请求出错</td>
-</tr>
-</tbody>
-</table>
-<h3 id="常见的状态码"><a href="#常见的状态码" class="headerlink" title="常见的状态码"></a>常见的状态码</h3><p>1.200 OK：客户端发来的请求在服务器端被正常处理了<br>2.204 NO Content：请求处理成功，但没有资源可以返回<br>3.206 Partial Content：表示客户端进行了范围请求，服务器成功执行了这部分的请求<br>4.301 Moved Permanently：永久性重新定向，表示请求的资源已被分配了新的URI<br>5.302 Found：临时性重新定向，资源的URI临时定位到其他位置了<br>6.303 See Other：表示请求对应的资源存在另一个URI，应使用GET方法定向获取请求的资源<br>7.304 Not Modified：资源已找到，但未符合条件要求<br>8.400 Bad Request：表示请求报文中存在语法错误<br>9.401 Unauthorized：未经授权，发送的请求需要通过认证<br>10.403：Forbidden：表示对请求资源的访问被服务器拒绝了<br>11.404 Not Found：服务器上没有请求的资源（也可以用在服务器端拒绝请求且不想说明理由）<br>12.500 Internal Server Error：服务器端在执行请求时发生了错误<br>13.503 Service Unavailable：服务器暂时处于超负载或正在进行停机维护</p>
-<h3 id="代理，网关，隧道"><a href="#代理，网关，隧道" class="headerlink" title="代理，网关，隧道"></a>代理，网关，隧道</h3><p><strong>代理</strong>：接受客户端的请求后转发给其他服务器<br>使用代理的理由</p>
-<ul>
-<li>利用缓存技术减少网络带宽的流量</li>
-<li>组织内部针对特定网站的访问控制</li>
-<li>获取访问日志</li>
-</ul>
-<p>缓存代理：预先将资源的缓存保存到代理服务器上，当再次接受到相同资源请求直接将缓存的资源作为响应返回<br>透明代理：不对报文做任何加工，反之为非透明代理</p>
-<p><strong>网关</strong>：工作机制与代理类似<br>使用网关的理由：</p>
-<ul>
-<li>能使通信线路上的服务器提供非HTTP协议服务</li>
-<li>提高通信的安全性，可以在客户端与网关的通信线路上加密以确保连接安全</li>
-</ul>
-<p><strong>隧道</strong>：在相隔甚远的客户端和服务器两者之间的中转<br>目的是确保客户端能与服务器进行安全的通信，隧道是透明的</p>
+<p><a href="https://www.cnblogs.com/Jewel591/p/7484516.html" target="_blank" rel="noopener">暴力破解</a></p>
 
       
 
@@ -302,7 +248,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/19/http/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/31/暴力破解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +262,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/31/命令注入/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/03/31/CSRF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
